@@ -1,0 +1,25 @@
+{
+  "id": "d197ca0b",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "ratio3",
+      "compareType": "bigger",
+      "value": "3"
+    },
+    {
+      "key": "tracker",
+      "compareType": "contain",
+      "value": "m-team,hdsky,hhanclub,hdhome,totheglory"
+    }
+  ],
+  "alias": "拆包删种(分享率3倍)",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}",
+  "used": true
+}

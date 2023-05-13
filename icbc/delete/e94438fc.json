@@ -1,0 +1,31 @@
+{
+  "id": "e94438fc",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "size",
+      "compareType": "bigger",
+      "value": "30*1024*1024*1024"
+    },
+    {
+      "key": "uploadSpeed",
+      "compareType": "smaller",
+      "value": "10*1024*1024"
+    },
+    {
+      "key": "freeSpace",
+      "compareType": "smaller",
+      "value": "50*1024*1024*1024"
+    }
+  ],
+  "alias": "拆包删种(BUG大种)",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}",
+  "fitTime": "40",
+  "used": true
+}

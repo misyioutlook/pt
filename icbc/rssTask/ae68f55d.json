@@ -1,0 +1,33 @@
+{
+  "clientArr": [
+    "d8164471"
+  ],
+  "enable": false,
+  "scrapeFree": false,
+  "scrapeHr": false,
+  "autoReseed": false,
+  "onlyReseed": false,
+  "maxSleepTime": 600,
+  "skipSameTorrent": false,
+  "pushTorrentFile": false,
+  "cron": "* * * * *",
+  "addCountPerHour": "",
+  "pushNotify": false,
+  "acceptRules": [
+    "81cfe020"
+  ],
+  "rejectRules": [],
+  "reseedClients": [],
+  "rssUrls": [
+    "你的 rss 链接，能抓免的尽量抓免。注意 H&R"
+  ],
+  "alias": "001.ICBC(爱拆不拆)-模板",
+  "clientSortBy": "uploadSpeed",
+  "uploadLimit": "95",
+  "uploadLimitUnit": "MiB",
+  "downloadLimit": "0",
+  "category": "KEEP",
+  "paused": true,
+  "id": "ae68f55d",
+  "sameServerClients": []
+}

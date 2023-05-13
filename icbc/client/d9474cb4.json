@@ -1,0 +1,35 @@
+{
+  "id": "d9474cb4",
+  "alias": "002-甲骨文-ICBC爱拆不拆-模板(安装会重置)",
+  "host": "",
+  "username": "你的用户名",
+  "password": "你的密码",
+  "port": "",
+  "enable": false,
+  "pushNotify": false,
+  "pushMonitor": false,
+  "spaceAlarm": false,
+  "firstLastPiecePrio": true,
+  "cron": "*/4 * * * * *",
+  "autoDeleteCron": "* * * * *",
+  "autoReannounce": true,
+  "autoDelete": true,
+  "deleteRules": [
+    "d197ca0b",
+    "6eda7976",
+    "2839f7bd",
+    "349ed2e6",
+    "a2ec9b69",
+    "8f1a0ce9",
+    "cc40c639"
+  ],
+  "type": "qBittorrent",
+  "clientUrl": "http://你的需要拆包QB IP:QB的端口",
+  "rejectDeleteRules": [],
+  "sameServerClients": [
+    "d8164471",
+    "d9474cb4"
+  ],
+  "used": false,
+  "status": false
+}

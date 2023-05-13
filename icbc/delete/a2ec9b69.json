@@ -1,0 +1,24 @@
+{
+  "id": "a2ec9b69",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "size",
+      "compareType": "smaller",
+      "value": "100*1024*1024"
+    },
+    {
+      "key": "uploadSpeed",
+      "compareType": "smaller",
+      "value": "50*1024"
+    }
+  ],
+  "alias": "拆包删种(垃圾种)",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}"
+}

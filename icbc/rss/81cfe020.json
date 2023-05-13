@@ -1,0 +1,13 @@
+{
+  "id": "81cfe020",
+  "conditions": [
+    {
+      "key": "size",
+      "compareType": "bigger",
+      "value": "3*1024*1024*1024"
+    }
+  ],
+  "alias": ">3G",
+  "type": "normal",
+  "code": "(torrent) => {\n  return false;\n}"
+}

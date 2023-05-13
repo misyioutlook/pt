@@ -1,0 +1,29 @@
+{
+  "id": "69a1b99e",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "uploaded",
+      "compareType": "bigger",
+      "value": "40*1024*1024*1024"
+    },
+    {
+      "key": "ratio3",
+      "compareType": "bigger",
+      "value": "2"
+    },
+    {
+      "key": "tracker",
+      "compareType": "contain",
+      "value": "springsunday"
+    }
+  ],
+  "alias": "拆包删种(不可说2倍)",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}"
+}

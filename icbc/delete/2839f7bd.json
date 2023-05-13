@@ -1,0 +1,25 @@
+{
+  "id": "2839f7bd",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "tracker",
+      "compareType": "contain",
+      "value": "m-team,hdsky"
+    },
+    {
+      "key": "size",
+      "compareType": "bigger",
+      "value": "50*1024*1024*1024"
+    }
+  ],
+  "alias": "拆包删种-甲骨文（BUG大种 天空馒头）",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}",
+  "fitTime": "0"
+}

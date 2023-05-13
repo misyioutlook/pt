@@ -1,0 +1,31 @@
+{
+  "id": "3d533e9b",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "freeSpace",
+      "compareType": "smaller",
+      "value": "10*1024*1024*1024"
+    },
+    {
+      "key": "uploadSpeed",
+      "compareType": "smaller",
+      "value": "3*1024*1024"
+    },
+    {
+      "key": "progress",
+      "compareType": "bigger",
+      "value": "0.01"
+    }
+  ],
+  "alias": "拆包删种(硬盘空间小于10G, 上传速度小于3M)",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}",
+  "fitTime": "60",
+  "used": true
+}

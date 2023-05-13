@@ -1,0 +1,30 @@
+{
+  "id": "500c4fb9",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "freeSpace",
+      "compareType": "smaller",
+      "value": "30*1024*1024*1024"
+    },
+    {
+      "key": "uploadSpeed",
+      "compareType": "smaller",
+      "value": "200*1024"
+    },
+    {
+      "key": "progress",
+      "compareType": "bigger",
+      "value": "0.01"
+    }
+  ],
+  "alias": "拆包删种(硬盘空间小于30G, 上传速度小于200K)",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}",
+  "fitTime": "60"
+}

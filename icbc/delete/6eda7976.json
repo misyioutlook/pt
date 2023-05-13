@@ -1,0 +1,16 @@
+{
+  "id": "6eda7976",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "equals",
+      "value": "D"
+    }
+  ],
+  "alias": "D",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}",
+  "deleteNum": "5",
+  "used": true
+}

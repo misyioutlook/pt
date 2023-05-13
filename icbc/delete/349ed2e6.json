@@ -1,0 +1,30 @@
+{
+  "id": "349ed2e6",
+  "conditions": [
+    {
+      "key": "category",
+      "compareType": "contain",
+      "value": "KEEP"
+    },
+    {
+      "key": "addedTime",
+      "compareType": "bigger",
+      "value": "2*3600"
+    },
+    {
+      "key": "uploadSpeed",
+      "compareType": "smaller",
+      "value": "50*1024"
+    },
+    {
+      "key": "progress",
+      "compareType": "bigger",
+      "value": "0.01"
+    }
+  ],
+  "alias": "拆包删种-甲骨文(添加大于2小时，上传小于50K，没速度)",
+  "type": "normal",
+  "priority": 0,
+  "code": "(maindata, torrent) => {\n  return false;\n}",
+  "fitTime": "120"
+}
