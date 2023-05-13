@@ -10,8 +10,6 @@ sudo ./debi.sh
 
 ## 自动拆包
 
-- 教学地址: https://misyi.notion.site/2b13912824354908917640558af04bab
-
 
 ### 安装命令
 ```shell
