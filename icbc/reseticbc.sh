@@ -20,7 +20,7 @@ fi
 # 使用$1访问传入的参数并将其显示出来
 echo "URL为：$1, 用户名为: $2, 密码为: $3"
 
-wget -O /root/icbc.sh https://raw.githubusercontent.com/misyili/pt/main/icbc/icbc.sh
+wget -O /root/icbc.sh https://raw.githubusercontent.com/misyioutlook/pt/main/icbc/icbc.sh
 
 sed -i "3i PASSWORD=$3" /root/icbc.sh
 sed -i "3i USERNAME=$2" /root/icbc.sh

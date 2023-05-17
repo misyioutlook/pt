@@ -1,8 +1,8 @@
 #!/bin/bash
 
-wget -O /root/icbc.sh https://raw.githubusercontent.com/misyili/pt/main/icbc/icbc.sh
-wget -O /root/stopicbc.sh https://raw.githubusercontent.com/misyili/pt/main/icbc/stopicbc.sh
-wget -O /root/reseticbc.sh https://raw.githubusercontent.com/misyili/pt/main/icbc/reseticbc.sh
+wget -O /root/icbc.sh https://raw.githubusercontent.com/misyioutlook/pt/main/icbc/icbc.sh
+wget -O /root/stopicbc.sh https://raw.githubusercontent.com/misyioutlook/pt/main/icbc/stopicbc.sh
+wget -O /root/reseticbc.sh https://raw.githubusercontent.com/misyioutlook/pt/main/icbc/reseticbc.sh
 
 # 导入配置
 sed -i '' -e '2 r /dev/stdin' icbc.sh <<< "$(grep '^URL=\|^USERNAME=\|^PASSWORD=' pack.sh)"

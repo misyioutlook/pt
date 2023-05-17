@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "ICBC-爱拆不拆  开始更新"
-wget -O /root/icbc.jar https://github.com/misyili/pt/raw/main/icbc/icbc.jar
+wget -O /root/icbc.jar https://github.com/misyioutlook/pt/raw/main/icbc/icbc.jar
 
 
 JAVA_MEM_OPTS="-Xmx256m -XX:MaxMetaspaceSize=128m -XX:CompressedClassSpaceSize=24m"
