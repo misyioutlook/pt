@@ -22,7 +22,7 @@
       "value": "springsunday"
     }
   ],
-  "alias": "拆包删种(不可说2倍)",
+  "alias": "拆包删种(不可说2倍) 规则已改,暂不可用",
   "type": "normal",
   "priority": 0,
   "code": "(maindata, torrent) => {\n  return false;\n}"
