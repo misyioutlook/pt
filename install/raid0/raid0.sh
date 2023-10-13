@@ -50,3 +50,5 @@ mkdir /down
 
 mount /dev/md0 /down
 
+tune2fs -m 0 /dev/md0
+
