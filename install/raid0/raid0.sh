@@ -24,7 +24,7 @@ sudo wget -O fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/in
 
 for char in "${selected_chars[@]}"; do
   expect parted.exp $char
-  expect wget.exp $char
+  expect fdisk.exp $char
 done
 
 #apt-get install mdadm -y
