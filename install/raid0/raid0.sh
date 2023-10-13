@@ -27,6 +27,8 @@ for char in "${selected_chars[@]}"; do
   expect wget.exp $char
 done
 
+apt-get install mdadm -y
+
 selected_chars=("${chars[@]:0:param_count}")
 
 mdadm_command="mdadm -Cv /dev/md0 -l0 -n$param_count"
