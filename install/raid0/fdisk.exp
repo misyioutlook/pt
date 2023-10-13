@@ -1,0 +1,26 @@
+#!/usr/bin/expect
+
+set timeout 2
+
+set arg1 [lindex $argv 0]
+
+spawn fdisk "/dev/sd$arg1"
+expect "Command (m for help):"
+send "d\r"
+expect "Command (m for help):"
+send "d\r"
+expect "Command (m for help):"
+send "d\r"
+expect "Command (m for help):"
+send "n\r"
+expect "default 1"
+send "1\r"
+expect "First sector"
+send "\r"
+expect "Last sector"
+send "\r"
+expect "remove the signature"
+send "yes\r"
+expect "Command (m for help):"
+send "w\r"
+expect eof

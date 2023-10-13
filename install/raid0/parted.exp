@@ -1,0 +1,20 @@
+#!/usr/bin/expect
+
+set timeout -1
+
+set arg1 [lindex $argv 0]
+
+spawn parted "/dev/sd$arg1"
+expect "parted"
+send "mklabel gpt\r"
+expect "Yes/No?" {
+    send "Yes\r"
+}
+expect "parted"
+send "unit GB\r"
+expect "parted"
+send "mkpart primary 0 0\r"
+expect "parted"
+send "print\r"
+expect "parted"
+send "quit\r"
