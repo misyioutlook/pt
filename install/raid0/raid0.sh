@@ -28,25 +28,25 @@ for char in "${selected_chars[@]}"; do
   expect fdisk.exp $char
 done
 
-#apt-get install mdadm -y
-#
-#selected_chars=("${chars[@]:0:param_count}")
-#
-#mdadm_command="mdadm -Cv /dev/md0 -l0 -n$param_count"
-#
-#for char in "${selected_chars[@]}"; do
-#  mdadm_command+=" /dev/sd$char"1
-#done
-#
-#echo "构建的 mdadm 命令为："
-#echo "$mdadm_command"
-#
-## 执行构建的 mdadm 命令
-#eval "$mdadm_command"
-#
-#mkfs.ext4 /dev/md0
-#
-#mkdir /down
-#
-#mount /dev/md0 /down
+apt-get install mdadm -y
+
+selected_chars=("${chars[@]:0:param_count}")
+
+mdadm_command="mdadm -Cv /dev/md0 -l0 -n$param_count"
+
+for char in "${selected_chars[@]}"; do
+  mdadm_command+=" /dev/sd$char"1
+done
+
+echo "构建的 mdadm 命令为："
+echo "$mdadm_command"
+
+# 执行构建的 mdadm 命令
+eval "$mdadm_command"
+
+mkfs.ext4 /dev/md0
+
+mkdir /down
+
+mount /dev/md0 /down
 
