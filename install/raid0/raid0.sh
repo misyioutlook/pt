@@ -28,6 +28,8 @@ for char in "${selected_chars[@]}"; do
   expect fdisk.exp $char
 done
 
+sleep 5
+
 apt-get install mdadm -y
 
 selected_chars=("${chars[@]:0:param_count}")
