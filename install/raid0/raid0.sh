@@ -19,8 +19,8 @@ selected_chars=("${chars[@]:0:param_count}")
 # 安装交互工具
 apt-get install expect -y
 
-sudo wget -O parted.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/raid0/parted.exp && chmod +x parted.exp
-sudo wget -O fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/raid0/fdisk.exp && chmod +x fdisk.exp
+sudo wget -O -N parted.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/raid0/parted.exp && chmod +x parted.exp
+sudo wget -O -N fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/raid0/fdisk.exp && chmod +x fdisk.exp
 
 for char in "${selected_chars[@]}"; do
   expect parted.exp $char
