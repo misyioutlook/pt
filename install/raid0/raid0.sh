@@ -24,6 +24,7 @@ sudo wget -O fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/in
 
 for char in "${selected_chars[@]}"; do
   expect parted.exp $char
+  sleep 0.5
   expect fdisk.exp $char
 done
 
