@@ -18,14 +18,10 @@ selected_chars=("${chars[@]:0:param_count}")
 
 # 安装工具
 apt-get install expect -y
-apt-get install parted -y
 
-sudo wget -O parted.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/raid0/parted.exp && chmod +x parted.exp
 sudo wget -O fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/raid0/fdisk.exp && chmod +x fdisk.exp
 
 for char in "${selected_chars[@]}"; do
-  expect parted.exp $char
-  sleep 0.5
   expect fdisk.exp $char
 done
 
@@ -57,3 +53,8 @@ chmod 777 /down
 
 tune2fs -m 0 /dev/md0
 
+#读取md0的uuid
+md0_uuid=$(blkid -s UUID -o value /dev/md0)
+
+#写入到fstab启动文件
+echo "UUID=$md0_uuid /data ext4 defaults 0 0" >> /etc/fstab
