@@ -1,6 +1,7 @@
 #!/bin/bash
 # 安装工具
-apt-get install expect -y
+apt install expect -y
+apt install parted -y
 
 sudo wget -O parted.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/big/parted.exp && chmod +x parted.exp
 sudo wget -O fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/big/fdisk.exp && chmod +x fdisk.exp
@@ -14,11 +15,11 @@ mkfs.ext4 /dev/sdb1
 
 mkdir /down
 
-mount /dev/md0 /down
+mount /dev/sdb1 /down
 
 chmod 777 /down
 
-tune2fs -m 0 /dev/md0
+tune2fs -m 0 /dev/sdb1
 
 #读取md0的uuid
 sdb1_uuid=$(blkid -s UUID -o value /dev/sdb1)
