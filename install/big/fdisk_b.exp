@@ -1,10 +1,6 @@
 #!/usr/bin/expect
 
-set timeout 1
-
-set arg1 [lindex $argv 0]
-
-spawn fdisk "/dev/sd$arg1"
+spawn fdisk /dev/sdb
 expect "Command (m for help):"
 send "d\r\r\r"
 expect "Command (m for help):"

@@ -3,11 +3,11 @@
 apt install expect -y
 apt install parted -y
 
-sudo wget -O parted.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/big/parted.exp && chmod +x parted.exp
-sudo wget -O fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/big/fdisk.exp && chmod +x fdisk.exp
+sudo wget -O parted_b.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/big/parted_b.exp && chmod +x parted_b.exp
+sudo wget -O fdisk_b.exp https://raw.githubusercontent.com/misyioutlook/pt/main/install/big/fdisk_b.exp && chmod +x fdisk_b.exp
 
-expect parted.exp "b"
-expect fdisk.exp "b"
+expect parted_b.exp
+expect fdisk_b.exp
 
 sleep 2
 
