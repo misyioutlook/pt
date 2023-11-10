@@ -9,8 +9,6 @@ expect "Command (m for help):"
 send "d\r\r\r"
 expect "Command (m for help):"
 send "n\r\r\r\r\r\r\r\r"
-expect "remove the signature"
-send "yes\r\r"
 expect "Command (m for help):"
 send "w\r\r"
 expect eof
