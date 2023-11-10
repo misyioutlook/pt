@@ -26,3 +26,7 @@ sdb1_uuid=$(blkid -s UUID -o value /dev/sdb1)
 
 #写入到fstab启动文件
 echo "UUID=$sdb1_uuid /down ext4 defaults 0 0" >> /etc/fstab
+
+rm parted_b.exp
+rm fdisk_b.exp
+rm big.sh
