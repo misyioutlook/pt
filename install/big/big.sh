@@ -9,7 +9,7 @@ sudo wget -O fdisk_b.exp https://raw.githubusercontent.com/misyioutlook/pt/main/
 expect parted_b.exp
 expect fdisk_b.exp
 
-sleep 2
+sleep 1
 
 mkfs.ext4 /dev/sdb1
 
