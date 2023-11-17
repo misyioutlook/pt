@@ -7,8 +7,23 @@ expect "Command (m for help):"
 send "d\r\r\r"
 expect "Command (m for help):"
 send "d\r\r\r"
+sleep 0.2
 expect "Command (m for help):"
-send "n\r\r\r\r\r\r\r\r"
+send "n"
+sleep 0.2
+send "\r"
+sleep 0.2
+send "\r"
+sleep 0.2
+send "\r"
+sleep 0.2
+send "\r"
+sleep 0.2
+send "\r"
+sleep 0.2
+send "\r"
+sleep 0.2
+send "\r"
 expect "remove the signature"
 send "yes\r\r"
 expect "Command (m for help):"
