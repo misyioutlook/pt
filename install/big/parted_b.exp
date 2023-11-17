@@ -3,6 +3,9 @@
 spawn parted /dev/sdb
 expect "parted"
 send "mklabel gpt\r"
+expect "Yes/No?" {
+    send "Yes\r"
+}
 expect "parted"
 send "unit TB\r"
 expect "parted"
