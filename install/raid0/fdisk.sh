@@ -24,3 +24,6 @@ sudo wget -O fdisk.exp https://raw.githubusercontent.com/misyioutlook/pt/main/in
 for char in "${selected_chars[@]}"; do
   expect fdisk.exp $char
 done
+
+rm fdisk.exp
+rm fdisk.sh

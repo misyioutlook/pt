@@ -42,4 +42,6 @@ tune2fs -m 0 /dev/md0
 md0_uuid=$(blkid -s UUID -o value /dev/md0)
 
 #写入到fstab启动文件
-echo "UUID=$md0_uuid /data ext4 defaults 0 0" >> /etc/fstab
+echo "UUID=$md0_uuid /down ext4 defaults 0 0" >> /etc/fstab
+
+rm mount.sh
