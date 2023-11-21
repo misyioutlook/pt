@@ -7,8 +7,10 @@ set arg1 [lindex $argv 0]
 spawn fdisk "/dev/sd$arg1"
 expect "Command (m for help):"
 send "d\r\r\r"
+sleep 0.2
 expect "Command (m for help):"
 send "d\r\r\r"
+sleep 0.2
 expect "Command (m for help):"
 send "d\r\r\r"
 sleep 0.2
