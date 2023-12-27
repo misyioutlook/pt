@@ -30,3 +30,17 @@ echo "UUID=$sdb1_uuid /down ext4 defaults 0 0" >> /etc/fstab
 rm parted_b.exp
 rm fdisk_b.exp
 rm big.sh
+
+lsblk
+
+sleep 5
+
+docker rm -f filebrowser && docker run -d --name filebrowser -v /down:/srv -v /root/filebrowser/config:/config -v /root/filebrowser/database:/database -e PUID=$(id -u) -e PGID=$(id -g) -p 18245:80 --restart=always filebrowser/filebrowser:s6
+
+sed -i 's#Downloads\\SavePath=/home/felens/qbittorrent/Downloads/#Downloads\\SavePath=/down/#' /root/.config/qBittorrent/qBittorrent.conf
+
+systemctl restart qbittorrent-nox
+
+sleep 1
+
+echo "===== 全部安装完成, 开始重启 ===="
