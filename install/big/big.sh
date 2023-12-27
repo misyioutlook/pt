@@ -44,3 +44,5 @@ systemctl restart qbittorrent-nox
 sleep 1
 
 echo "===== 全部安装完成, 开始重启 ===="
+
+reboot
