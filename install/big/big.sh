@@ -37,9 +37,9 @@ sleep 5
 
 docker rm -f fb3 && docker run -d --name fb3 -v /down:/myfiles -v /root/filebrowser/config:/config -e PUID=$(id -u) -e PGID=$(id -g) -p 18245:8088 --restart=always 80x86/filebrowser:latest
 
-sed -i 's#Downloads\\SavePath=/home/felens/qbittorrent/Downloads/#Downloads\\SavePath=/down/#' /root/.config/qBittorrent/qBittorrent.conf
+sed -i 's#Downloads\\SavePath=/home/felens/qbittorrent/Downloads/#Downloads\\SavePath=/down/#' /home/felens/.config/qBittorrent/qBittorrent.conf
 
-systemctl restart qbittorrent-nox
+systemctl restart qbittorrent-nox@felens
 
 sleep 1
 
