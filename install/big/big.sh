@@ -43,6 +43,6 @@ systemctl restart qbittorrent-nox@felens
 
 sleep 1
 
-echo "===== 全部安装完成, 开始重启 ===="
+echo "===== 全部安装完成, 请使用 sudo mount -a 检查后, 再手动重启 ===="
 
-reboot
+#reboot
