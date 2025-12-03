@@ -35,7 +35,7 @@ lsblk
 
 sleep 5
 
-docker rm -f filebrowser && docker run -d --name filebrowser -v /down:/srv -v /root/filebrowser/config:/config -v /root/filebrowser/database:/database -e PUID=$(id -u) -e PGID=$(id -g) -p 18245:80 --restart=always filebrowser/filebrowser:s6
+docker rm -f fb3 && docker run -d --name fb3 -v /down:/myfiles -v /root/filebrowser/config:/config -e PUID=$(id -u) -e PGID=$(id -g) -p 18245:8088 --restart=always 80x86/filebrowser:latest
 
 sed -i 's#Downloads\\SavePath=/home/felens/qbittorrent/Downloads/#Downloads\\SavePath=/down/#' /root/.config/qBittorrent/qBittorrent.conf
 
